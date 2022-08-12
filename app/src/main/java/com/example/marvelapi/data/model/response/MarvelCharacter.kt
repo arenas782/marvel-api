@@ -8,7 +8,9 @@ import com.squareup.moshi.Json
 
 @Entity(tableName = "MarvelCharacters")
 data class MarvelCharacter(
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
+    val externalId : Int,
+
     @field:Json(name = "id")
     val id : Int,
 

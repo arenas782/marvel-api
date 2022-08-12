@@ -10,7 +10,7 @@ import com.example.marvelapi.data.model.response.MarvelCharacter
 
 @Dao
 interface CharacterDao {
-    @Query("SELECT * FROM marvelcharacters order by name asc ")
+    @Query("SELECT * FROM marvelcharacters order by externalId asc ")
     fun getCharacters(): PagingSource<Int,MarvelCharacter>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

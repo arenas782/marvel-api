@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 import com.example.marvelapi.data.model.RemoteKeys
 import com.example.marvelapi.data.model.response.MarvelCharacter
 
-@Database(entities = [MarvelCharacter::class, RemoteKeys::class], version = 14)
+@Database(entities = [MarvelCharacter::class, RemoteKeys::class], version = 15)
 @TypeConverters(CharacterSeriesConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun characterDao(): CharacterDao
